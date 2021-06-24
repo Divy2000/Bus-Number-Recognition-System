@@ -9,7 +9,7 @@ import io
 import numpy as np
 from Capture import get_f
 from BusNumberAPI import getArrivingBus, getCurrentBus
-# from espeak import espeak
+from espeak import espeak
 from threading import Thread
 # import os
 #os.chdir("D:\Divy\Compan")
@@ -36,7 +36,7 @@ class BusArriveSpeak(Thread):
             for e in l:
                 if num != e:
                     num = e
-                    # espeak.synth(f"Bus Number {e} is arriving.")
+                    espeak.synth(f"Bus Number {e} is arriving.")
                     print(f"Bus Number {e} is arriving.")
                     #pass
                     
@@ -69,7 +69,7 @@ def detect():
     # num = 123
     correct, orignal_num = checkCurrentNum(num,busStopNo)
     print(f"Predicted - {num} Orignal - {orignal_num} - {correct}")
-    # espeak.synth(num)
+    espeak.synth(num)
 BusArriveSpeak(busStopNo)
     
 while True:
