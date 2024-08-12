@@ -13,3 +13,10 @@ This project is designed to detect and announce bus numbers for visually impaire
 - **Google Account**: Required for setting up Google Cloud.
 - **Raspberry Pi**: For running the client-side scripts.
 - **Arduino**: Integrated for capturing and sending data.
+
+## Project Details
+- **Detection Views**: Works from both front and side views; performs better from the side view during daytime and accurately at night.
+- **API Integration**: Uses the Singapore government’s bus station API for real-time data.
+- **Announcement**: Raspberry Pi announces the arrival of the next bus.
+- **Performance**: Local GPU is recommended for better performance compared to cloud CPU.
+
